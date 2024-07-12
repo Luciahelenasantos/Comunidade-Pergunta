@@ -2,7 +2,6 @@ import { FormEvent, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
 import illustrationImg from '../assets/images/illustration.svg'
-import logoImg from '../assets/images/logo.svg'
 
 import { Button } from '../components/Button'
 import { useAuth } from '../hooks/useAuth'
@@ -45,7 +44,6 @@ export function CriarSala() {
       </aside>
       <main>
         <MainContent>
-          <img src={logoImg} alt="Comunidade-Pergunta" />
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input

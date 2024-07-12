@@ -1,8 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import logoImg from '../../assets/images/logo.svg'
-
 import { Button } from '../../components/Button'
 import { SalaCode } from '../../components/SalaCode'
 import { Question } from '../../components/Question'
@@ -87,7 +85,6 @@ export function Sala() {
     <PageRoomContainer>
       <Header>
         <Content>
-          <img src={logoImg} alt="Comunidade-Pergunta" />
           <SalaCode code={salaId} />
         </Content>
       </Header>

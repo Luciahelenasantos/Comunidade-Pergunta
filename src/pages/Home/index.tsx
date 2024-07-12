@@ -4,7 +4,6 @@ import { FormEvent, useState } from 'react'
 import { database, ref, get, child } from '../../services/firebase'
 
 import illustrationImg from '../../assets/images/illustration.svg'
-import logoImg from '../../assets/images/logo.svg'
 import googleIconImg from '../../assets/images/google-icon.svg'
 
 import { Button } from '../../components/Button'
@@ -64,7 +63,6 @@ export function Home() {
       </aside>
       <main>
         <MainContent>
-          <img src={logoImg} alt="Comunidade-Pergunta" />
           <CreateRoomButton onClick={handleCreateRoom}>
             <img src={googleIconImg} alt="Logo do Google" />
             Crie sua sala com o Google

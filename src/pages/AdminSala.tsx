@@ -1,7 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { ref, update, remove } from 'firebase/database'
 
-import logoImg from '../assets/images/logo.svg'
 import deleteImg from '../assets/images/delete.svg'
 import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
@@ -69,7 +68,6 @@ export function AdminSala() {
     <PageRoomContainer>
       <Header>
         <Content>
-          <img src={logoImg} alt="Comunidade-Pergunta" />
           <div>
             <SalaCode code={salaId!} />
             <Button isOutlined onClick={handleEndRoom}>
