@@ -1,69 +1,69 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, ReactNode, useEffect, useState } from 'react'
 import {
   auth,
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
-} from '../services/firebase';
+} from '../services/firebase'
 
 type User = {
-  id: string;
-  name: string;
-  avatar: string;
-};
+  id: string
+  name: string
+  avatar: string
+}
 
 type AuthContextType = {
-  user: User | undefined;
-  signInWithGoogle: () => Promise<void>;
-};
+  user: User | undefined
+  signInWithGoogle: () => Promise<void>
+}
 
 type AuthContextProviderProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
-export const AuthContext = createContext({} as AuthContextType);
+export const AuthContext = createContext({} as AuthContextType)
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User>()
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const { displayName, photoURL, uid } = user;
+        const { displayName, photoURL, uid } = user
 
         if (!displayName || !photoURL) {
-          throw new Error('Informações ausentes da Conta do Google.');
+          throw new Error('Informações ausentes da Conta do Google.')
         }
 
         setUser({
           id: uid,
           name: displayName,
           avatar: photoURL,
-        });
+        })
       }
-    });
+    })
 
     return () => {
-      unsubscribe();
-    };
-  }, []);
+      unsubscribe()
+    }
+  }, [])
 
   async function signInWithGoogle() {
-    const provider = new GoogleAuthProvider();
-    const result = await signInWithPopup(auth, provider);
+    const provider = new GoogleAuthProvider()
+    const result = await signInWithPopup(auth, provider)
 
     if (result.user) {
-      const { displayName, photoURL, uid } = result.user;
+      const { displayName, photoURL, uid } = result.user
 
       if (!displayName || !photoURL) {
-        throw new Error('Informações ausentes da Conta do Google.');
+        throw new Error('Informações ausentes da Conta do Google.')
       }
 
       setUser({
         id: uid,
         name: displayName,
         avatar: photoURL,
-      });
+      })
     }
   }
 
@@ -71,5 +71,5 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
     <AuthContext.Provider value={{ user, signInWithGoogle }}>
       {props.children}
     </AuthContext.Provider>
-  );
+  )
 }

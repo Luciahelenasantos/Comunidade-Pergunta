@@ -4,13 +4,13 @@ export const RoomCodeContainer = styled.div`
   height: 40px;
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid #835afd;
+  background: ${(props) => props.theme['white']};
+  border: 1px solid ${(props) => props.theme['green-500']};
   cursor: pointer;
   display: flex;
 
   div {
-    background: #835afd;
+    background: ${(props) => props.theme['green-500']};
     padding: 0 12px;
     display: flex;
     justify-content: center;

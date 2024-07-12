@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Home } from "./pages/Home";
-import { CriarSala } from "./pages/CriarSala";
-import { Sala } from './pages/Sala';
-import { AdminSala } from './pages/AdminSala';
-import { AuthContextProvider } from './contexts/AuthContext';
-import { ThemeProvider } from 'styled-components';
-import { defaultTheme } from './styles/themes/default';
-import { GlobalStyle } from './styles/global';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from './pages/Home'
+import { CriarSala } from './pages/CriarSala'
+import { Sala } from './pages/Sala'
+import { AdminSala } from './pages/AdminSala'
+import { AuthContextProvider } from './contexts/AuthContext'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
 
 export function App() {
   return (
@@ -23,5 +23,5 @@ export function App() {
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
-  );
+  )
 }

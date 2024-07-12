@@ -45,7 +45,7 @@ export function CriarSala() {
       </aside>
       <main>
         <MainContent>
-          <img src={logoImg} alt="Comunidade-Resposta" />
+          <img src={logoImg} alt="Comunidade-Pergunta" />
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input

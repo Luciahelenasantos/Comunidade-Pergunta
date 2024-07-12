@@ -1,6 +1,7 @@
+// themes/default.ts
 export const defaultTheme = {
   white: '#FFF',
-
+  black: '#000000',
   'gray-100': '#E1E1E6',
   'gray-300': '#C4C4CC',
   'gray-400': '#8D8D99',
@@ -17,5 +18,14 @@ export const defaultTheme = {
   'red-500': '#AB222E',
   'red-700': '#7A1921',
 
-  'yellow-500': '#FBA94C',
+  // Add new colors based on your components
+  'highlighted-bg': '#F4F0FF',
+  'highlighted-border': '#835AFD',
+  'question-bg': '#FEFEFE',
+  'answered-bg': '#DBDCDD',
+  'user-info-color': '#737380',
+  'like-button-color': '#737380',
+  'like-button-liked': '#835AFD',
+  'room-code-border': '#835AFD',
+  'room-code-inner-bg': '#835AFD',
 }

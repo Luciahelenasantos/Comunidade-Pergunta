@@ -4,7 +4,7 @@ export const PageRoomContainer = styled.div``
 
 export const Header = styled.header`
   padding: 24px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid ${(props) => props.theme['gray-100']};
 `
 
 export const Content = styled.div`
@@ -46,10 +46,10 @@ export const RoomTitle = styled.div`
 
   span {
     margin-left: 16px;
-    background: #e559f9;
+    background: ${(props) => props.theme['green-700']};
     border-radius: 9999px;
     padding: 8px 16px;
-    color: #fff;
+    color: #${(props) => props.theme['white']};
     font-weight: 500;
     font-size: 14px;
   }
@@ -61,7 +61,7 @@ export const Form = styled.form`
     border: 0;
     padding: 16px;
     border-radius: 8px;
-    background: #fefefe;
+    background: ${(props) => props.theme['gray-100']};
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     resize: vertical;
     min-height: 130px;
@@ -76,13 +76,13 @@ export const FormFooter = styled.div`
 
   > span {
     font-size: 14px;
-    color: #737380;
+    color: ${(props) => props.theme['gray-400']};
     font-weight: 500;
 
     button {
       background: transparent;
       border: 0;
-      color: #835afd;
+      color: ${(props) => props.theme['green-500']};
       text-decoration: underline;
       font-size: 14px;
       font-weight: 500;
@@ -103,7 +103,7 @@ export const UserInfo = styled.div`
 
   span {
     margin-left: 8px;
-    color: #29292e;
+    color: ${(props) => props.theme['gray-700']};
     font-weight: 500;
     font-size: 14px;
   }

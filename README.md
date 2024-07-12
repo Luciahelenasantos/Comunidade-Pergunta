@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+## Regras de Autenticação com Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[x] Apenas usuários autenticados podem ler dados de salas e perguntas
 
-Currently, two official plugins are available:
+[x] Apenas usuários autenticados podem criar novas salas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[x] Apenas usuários autenticados podem enviar novas perguntas
 
-## Expanding the ESLint configuration
+[x] Apenas usuários autenticados podem curtir uma pergunta
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+[x] O usuário pode remover uma curtida de pergunta se for o proprietário
 
-- Configure the top-level `parserOptions` property like this:
+[x] Usuários não podem atualizar ou excluir perguntas se não forem proprietários da sala
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+[x] Apenas o proprietário da sala pode atualizar o destaque e os dados de respondido de uma pergunta
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[x] Apenas o proprietário da sala pode fechar a sala
+
+[ ] Não permitir curtidas duplicadas do mesmo autor
+
+[ ] Não permitir que o usuário curta as próprias perguntas

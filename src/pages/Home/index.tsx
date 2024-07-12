@@ -1,61 +1,64 @@
-import { useNavigate } from 'react-router-dom';
-import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom'
+import { FormEvent, useState } from 'react'
 
-import { database, ref, get, child } from '../../services/firebase';
+import { database, ref, get, child } from '../../services/firebase'
 
-import illustrationImg from '../../assets/images/illustration.svg';
-import logoImg from '../../assets/images/logo.svg';
-import googleIconImg from '../../assets/images/google-icon.svg';
+import illustrationImg from '../../assets/images/illustration.svg'
+import logoImg from '../../assets/images/logo.svg'
+import googleIconImg from '../../assets/images/google-icon.svg'
 
-import { Button } from '../../components/Button';
-import { useAuth } from '../../hooks/useAuth';
+import { Button } from '../../components/Button'
+import { useAuth } from '../../hooks/useAuth'
 
 import {
   PageAuthContainer,
   MainContent,
   CreateRoomButton,
   Separator,
-} from './styles';
+} from './styles'
 
 export function Home() {
-  const navigate = useNavigate();
-  const { user, signInWithGoogle } = useAuth();
-  const [roomCode, setRoomCode] = useState<string>('');
+  const navigate = useNavigate()
+  const { user, signInWithGoogle } = useAuth()
+  const [roomCode, setRoomCode] = useState<string>('')
 
   async function handleCreateRoom() {
     if (!user) {
-      await signInWithGoogle();
+      await signInWithGoogle()
     }
-    navigate('/sala/nova');
+    navigate('/sala/nova')
   }
 
   async function handleJoinRoom(event: FormEvent) {
-    event.preventDefault();
+    event.preventDefault()
 
     if (roomCode.trim() === '') {
-      return;
+      return
     }
 
-    const roomRef = ref(database);
-    const roomSnapshot = await get(child(roomRef, `salas/${roomCode}`));
+    const roomRef = ref(database)
+    const roomSnapshot = await get(child(roomRef, `salas/${roomCode}`))
 
     if (!roomSnapshot.exists()) {
-      alert('Sala não existente');
-      return;
+      alert('Sala não existente')
+      return
     }
 
     if (roomSnapshot.val().endedAt) {
-      alert('Sala já foi encerrada.');
-      return;
+      alert('Sala já foi encerrada.')
+      return
     }
 
-    navigate(`/sala/${roomCode}`);
+    navigate(`/sala/${roomCode}`)
   }
 
   return (
     <PageAuthContainer>
       <aside>
-        <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
+        <img
+          src={illustrationImg}
+          alt="Ilustração simbolizando perguntas e respostas"
+        />
         <strong>Crie salas de Q&amp;A ao vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo real</p>
       </aside>
@@ -79,5 +82,5 @@ export function Home() {
         </MainContent>
       </main>
     </PageAuthContainer>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const PageAuthContainer = styled.div`
   display: flex;
@@ -7,8 +7,8 @@ export const PageAuthContainer = styled.div`
 
   aside {
     flex: 7;
-    background: #835afd;
-    color: #fff;
+    background: ${(props) => props.theme['green-500']};
+    color: ${(props) => props.theme['white']};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,7 +19,9 @@ export const PageAuthContainer = styled.div`
     }
 
     strong {
-      font: 700 36px 'Poppins', sans-serif;
+      font:
+        700 36px 'Poppins',
+        sans-serif;
       line-height: 42px;
       margin-top: 16px;
     }
@@ -28,7 +30,7 @@ export const PageAuthContainer = styled.div`
       font-size: 24px;
       line-height: 32px;
       margin-top: 16px;
-      color: #f8f8f8;
+      color: ${(props) => props.theme['gray-100']};
     }
   }
 
@@ -39,7 +41,7 @@ export const PageAuthContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
-`;
+`
 
 export const MainContent = styled.div`
   display: flex;
@@ -64,8 +66,8 @@ export const MainContent = styled.div`
       height: 50px;
       border-radius: 8px;
       padding: 0 16px;
-      background: #fff;
-      border: 1px solid #a8a8b3;
+      background: ${(props) => props.theme['white']};
+      border: 1px solid ${(props) => props.theme['gray-100']};;
     }
 
     button {
@@ -80,22 +82,22 @@ export const MainContent = styled.div`
 
   p {
     font-size: 14px;
-    color: #737380;
+    color: ${(props) => props.theme['gray-400']};
     margin-top: 16px;
 
     a {
-      color: #e559f9;
+      color: ${(props) => props.theme['green-700']};
     }
   }
-`;
+`
 
 export const CreateRoomButton = styled.button`
   margin-top: 64px;
   height: 50px;
   border-radius: 8px;
   font-weight: 500;
-  background: #ea4335;
-  color: #fff;
+  background: ${(props) => props.theme['red-500']};
+  color: ${(props) => props.theme['white']};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,11 +112,11 @@ export const CreateRoomButton = styled.button`
   &:hover {
     filter: brightness(0.9);
   }
-`;
+`
 
 export const Separator = styled.div`
   font-size: 14px;
-  color: #a8a8b3;
+  color: ${(props) => props.theme['gray-400']};
   margin: 32px 0;
   display: flex;
   align-items: center;
@@ -124,7 +126,7 @@ export const Separator = styled.div`
     content: '';
     flex: 1;
     height: 1px;
-    background: #a8a8b3;
+    background: ${(props) => props.theme['gray-400']};
   }
 
   &::before {
@@ -134,4 +136,4 @@ export const Separator = styled.div`
   &::after {
     margin-left: 16px;
   }
-`;
+`
