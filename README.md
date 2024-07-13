@@ -14,6 +14,7 @@ Este é o frontend do projeto **Comunidade-Pergunta**, construído com React, Ty
   - [Instalação](#instalação)
   - [Rotas da Aplicação](#rotas-da-aplicação)
   - [Regras de Autenticação Firebase](#regras-de-autenticação-firebase)
+  - [UX Designer da Telas](#ux-designer-da-telas)
 
 ## Pré-requisitos
 
@@ -69,3 +70,7 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 [ ] Não permitir curtidas duplicadas do mesmo autor
 
 [ ] Não permitir que o usuário curta as próprias perguntas
+
+## UX Designer da Telas
+
+Link do Figma: https://www.figma.com/design/ZonOWVZ9HzxGypvKuEs1cX/Salas-Virtuais-Comunidade?node-id=0-1&t=OGO2qaT6NSzqLLk2-0
