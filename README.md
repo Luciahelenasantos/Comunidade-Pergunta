@@ -1,5 +1,9 @@
 # Comunidade-Pergunta Frontend
 
+A aplicação Comunidade-Pergunta tem como objetivo facilitar a comunicação entre o presidente da associação de moradores e os moradores da comunidade.
+Através da criação de salas virtuais, o presidente (admin) pode criar um espaço onde os moradores podem fazer perguntas e obter respostas de maneira
+organizada e eficiente.
+
 Este é o frontend do projeto **Comunidade-Pergunta**, construído com React, TypeScript e Firebase.
 
 ## Sumário
@@ -29,6 +33,11 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
    ```sh
    npm install
+
+3. Para iniciar o projeto localmente, execute:
+  
+  ```sh
+   npm run dev
 
 ## Regras de Autenticação com Firebase
 
