@@ -3,7 +3,7 @@ import { FormEvent, useState } from 'react'
 
 import { database, ref, get, child } from '../../services/firebase'
 
-import illustrationImg from '../../assets/images/illustration.svg'
+import favelaImg from '../../assets/images/favela.svg'
 import googleIconImg from '../../assets/images/google-icon.svg'
 
 import { Button } from '../../components/Button'
@@ -55,11 +55,11 @@ export function Home() {
     <PageAuthContainer>
       <aside>
         <img
-          src={illustrationImg}
-          alt="Ilustração simbolizando perguntas e respostas"
+          src={favelaImg}
+          alt="Foto Favela"
         />
-        <strong>Crie salas de Q&amp;A ao vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo real</p>
+        <strong>Salas Virtuais de Perguntas da sua Comunidade</strong>
+        <p>Fale com a sua Associação de Moradores</p>
       </aside>
       <main>
         <MainContent>

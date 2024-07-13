@@ -1,3 +1,35 @@
+# Comunidade-Pergunta Frontend
+
+Este é o frontend do projeto **Comunidade-Pergunta**, construído com React, TypeScript e Firebase.
+
+## Sumário
+
+- [Comunidade-Pergunta Frontend](#comunidade-pergunta-frontend)
+  - [Sumário](#sumário)
+  - [Pré-requisitos](#pré-requisitos)
+  - [Instalação](#instalação)
+  - [Regras de Autenticação com Firebase](#regras-de-autenticação-com-firebase)
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
+
+- [Node.js](https://nodejs.org/en/download/) (recomendado a versão LTS)
+- [npm](https://www.npmjs.com/get-npm)
+
+## Instalação
+
+1. Clone o repositório:
+
+   ```sh
+   git clone https://github.com/Luciahelenasantos/Comunidade-Pergunta.git
+   cd Comunidade-Pergunta
+
+2. Instale as dependências:
+
+   ```sh
+   npm install
+
 ## Regras de Autenticação com Firebase
 
 [x] Apenas usuários autenticados podem ler dados de salas e perguntas

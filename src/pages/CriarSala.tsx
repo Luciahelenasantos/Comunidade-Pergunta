@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import illustrationImg from '../assets/images/illustration.svg'
+import favelaImg from '../assets/images/favela.svg'
 
 import { Button } from '../components/Button'
 import { useAuth } from '../hooks/useAuth'
@@ -36,11 +36,11 @@ export function CriarSala() {
     <PageAuthContainer>
       <aside>
         <img
-          src={illustrationImg}
-          alt="Ilustração simbolizando perguntas e respostas"
+          src={favelaImg}
+          alt="Foto Favela"
         />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <strong>Salas Virtuais de dúvidas da sua Comunidade</strong>
+        <p>Fale com a sua Associação de Moradores</p>
       </aside>
       <main>
         <MainContent>
