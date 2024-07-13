@@ -38,6 +38,7 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
   
   ```sh
    npm run dev
+   
 
 ## Regras de Autenticação com Firebase
 
