@@ -12,7 +12,7 @@ Este é o frontend do projeto **Comunidade-Pergunta**, construído com React, Ty
   - [Sumário](#sumário)
   - [Pré-requisitos](#pré-requisitos)
   - [Instalação](#instalação)
-  - [Regras de Autenticação com Firebase](#regras-de-autenticação-com-firebase)
+  - [Regras de Autenticação Firebase](#regras-de-autenticação-firebase)
 
 ## Pré-requisitos
 
@@ -38,9 +38,9 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
   
   ```sh
    npm run dev
-   
-
-## Regras de Autenticação com Firebase
+  ```
+  
+## Regras de Autenticação Firebase
 
 [x] Apenas usuários autenticados podem ler dados de salas e perguntas
 
